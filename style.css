@@ -459,6 +459,11 @@ html[data-theme="dark"] .project-card:hover {
     margin-bottom: 27px;
 }
 
+.experience-tags {
+    margin-top: 26px;
+    margin-bottom: 0;
+}
+
 .project-link {
     color: var(--accent);
     font-weight: 740;
