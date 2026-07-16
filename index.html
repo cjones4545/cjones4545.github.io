@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -12,1152 +10,629 @@
 
     <meta
         name="description"
-        content="Carson Jones | Infrastructure, Kubernetes, Linux, Automation and DevSecOps Portfolio"
+        content="Carson Jones — infrastructure, Linux, Kubernetes, automation, and DevSecOps portfolio."
     >
 
-    <title>
-        Carson Jones | Infrastructure & DevSecOps
-    </title>
+    <title>Carson Jones | Infrastructure & DevSecOps</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 
+    <script>
+        /*
+         * Apply the saved theme before the page renders.
+         * This prevents a bright flash when dark mode is enabled.
+         */
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const systemPrefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches;
+
+        document.documentElement.dataset.theme =
+            savedTheme || (systemPrefersDark ? "dark" : "light");
+    </script>
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a class="logo" href="#top" aria-label="Carson Jones home">
+                CJ
+            </a>
 
-<header>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#technologies">Technologies</a>
+                <a href="#resume">Résumé</a>
 
-    <div class="container nav">
-
-        <a class="logo" href="#">
-
-            Carson Jones
-
-        </a>
-
-        <nav>
-
-            <a href="#projects">Projects</a>
-
-            <a href="#experience">Experience</a>
-
-            <a href="#resume">Résumé</a>
-
-            <a href="#contact">Contact</a>
-
-            <button
-                id="theme-toggle"
-                class="theme-toggle"
-            >
-                🌙
-            </button>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-<section class="hero">
-
-    <div class="container hero-grid">
-
-        <div>
-
-            <p class="eyebrow">
-
-                SYSTEMS ADMINISTRATION • DEVSECOPS • PLATFORM ENGINEERING
-
-            </p>
-
-            <h1>
-
-                Building secure infrastructure
-                from Linux internals to Kubernetes.
-
-            </h1>
-
-            <p class="hero-text">
-
-                I'm Carson Jones, a Systems Administrator with a passion for
-                understanding how infrastructure works beneath the abstraction
-                layers. I enjoy building repeatable, secure systems using Linux,
-                Kubernetes, automation, and Infrastructure as Code.
-
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button primary"
-                    href="#projects"
+                <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Switch color theme"
+                    aria-pressed="false"
                 >
-                    View Projects
-                </a>
-
-                <a
-                    class="button secondary"
-                    href="assets/Carson-Jones-Resume.pdf"
-                    download
-                >
-                    Download Résumé
-                </a>
-
-            </div>
-
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Dark</span>
+                </button>
+            </nav>
         </div>
-
-
-        <div class="summary-card">
-
-            <h3>
-
-                Professional Summary
-
-            </h3>
-
-            <div class="summary-row">
-
-                <span>Current Position</span>
-
-                <strong>
-                    Systems Administrator II
-                </strong>
-
-            </div>
-
-            <div class="summary-row">
-
-                <span>Company</span>
-
-                <strong>
-                    Lockheed Martin
-                </strong>
-
-            </div>
-
-            <div class="summary-row">
-
-                <span>Primary Focus</span>
-
-                <strong>
-
-                    Linux • Kubernetes • Automation
-
-                </strong>
-
-            </div>
-
-            <div class="summary-row">
-
-                <span>Interested In</span>
-
-                <strong>
-
-                    DevSecOps
-                    Platform Engineering
-                    Container Runtime Development
-
-                </strong>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section
-    id="projects"
-    class="section"
->
-
-<div class="container">
-
-<p class="eyebrow">
-
-FEATURED PROJECTS
-
-</p>
-
-<h2>
-
-Projects
-
-</h2>
-
-<p class="section-text">
-
-Projects that demonstrate how I approach infrastructure,
-automation, Linux internals, Kubernetes and secure engineering.
-
-</p>
-
-
-
-<div class="project-card">
-
-<div class="project-header">
-
-<div>
-
-<p class="project-type">
-
-Linux • Containers • Python
-
-</p>
-
-<h3>
-
-Toy Container Runtime
-
-</h3>
-
-</div>
-
-<a
-
-target="_blank"
-
-href="https://github.com/cjones4545/Toy-container-runtime"
-
->
-
-Repository →
-
-</a>
-
-</div>
-
-
-
-<p>
-
-A Python-based toy container runtime created to better understand
-how production runtimes like runc, Docker and Podman leverage Linux
-namespaces, filesystem isolation, mounts and process execution.
-
-</p>
-
-<h4>
-
-Technologies Used
-
-</h4>
-
-<div class="chips">
-
-<span>Python</span>
-
-<span>Linux</span>
-
-<span>Namespaces</span>
-
-<span>Containers</span>
-
-<span>Mounts</span>
-
-<span>Process Isolation</span>
-
-</div>
-
-</div>
-<div class="project-card">
-
-    <div class="project-header">
-
-        <div>
-
-            <p class="project-type">
-
-                Kubernetes • Ansible • Air-Gapped Infrastructure
-
-            </p>
-
-            <h3>
-
-                RKE2 Setup
-
-            </h3>
-
-        </div>
-
-        <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/cjones4545/rke2-setup"
-        >
-            Repository →
-        </a>
-
-    </div>
-
-    <p>
-
-        An Ansible-based automation project for deploying RKE2 Kubernetes
-        in a disconnected environment. The project focuses on repeatable
-        installation, offline assets, node configuration, and reducing
-        manual cluster setup.
-
-    </p>
-
-    <h4>
-
-        Technologies Used
-
-    </h4>
-
-    <div class="chips">
-
-        <span>Ansible</span>
-
-        <span>RKE2</span>
-
-        <span>Kubernetes</span>
-
-        <span>Linux</span>
-
-        <span>YAML</span>
-
-        <span>Air-Gapped Systems</span>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section
-    id="experience"
-    class="section alternate"
->
-
-    <div class="container">
-
-        <p class="eyebrow">
-
-            PROFESSIONAL BACKGROUND
-
-        </p>
-
-        <h2>
-
-            Experience
-
-        </h2>
-
-        <p class="section-text">
-
-            Experience supporting enterprise infrastructure, development
-            platforms, automation initiatives, and large-scale technical
-            operations.
-
-        </p>
-
-
-
-        <div class="timeline">
-
-            <article class="timeline-item">
-
-                <div class="timeline-date">
-
-                    <p>
-
-                        June 2025 — Present
-
-                    </p>
-
-                    <p>
-
-                        Huntsville, Alabama
-
-                    </p>
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-
-                        Systems Administrator II
-
-                    </h3>
-
-                    <p class="company">
-
-                        Lockheed Martin
-
-                    </p>
-
-                    <p>
-
-                        Support on-premises infrastructure and development
-                        environments while improving repeatability through
-                        automation, containerization, and infrastructure-as-code
-                        practices.
-
-                    </p>
-
-                    <ul>
-
-                        <li>
-
-                            Support infrastructure for development and production
-                            workloads across Linux, virtualization, storage, and
-                            network-integrated services.
-
-                        </li>
-
-                        <li>
-
-                            Deploy and manage containerized workloads using Docker,
-                            Podman, Kubernetes, and related platform tooling.
-
-                        </li>
-
-                        <li>
-
-                            Develop reusable Ansible and Terraform workflows to
-                            replace manual provisioning and system configuration.
-
-                        </li>
-
-                        <li>
-
-                            Perform root-cause analysis across operating systems,
-                            applications, build pipelines, and distributed
-                            infrastructure.
-
-                        </li>
-
-                        <li>
-
-                            Help align infrastructure operations with development
-                            delivery workflows through version control, automation,
-                            and repeatable deployment practices.
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="timeline-item">
-
-                <div class="timeline-date">
-
-                    <p>
-
-                        October 2022 — May 2024
-
-                    </p>
-
-                    <p>
-
-                        Quantico, Virginia
-
-                    </p>
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-
-                        Applications and Automation Solutions Chief
-
-                    </h3>
-
-                    <p class="company">
-
-                        United States Marine Corps
-
-                    </p>
-
-                    <p>
-
-                        Led enterprise technical teams responsible for databases,
-                        automation, monitoring, reporting, and software distribution
-                        across a large-scale operational environment.
-
-                    </p>
-
-                    <ul>
-
-                        <li>
-
-                            Oversaw enterprise SQL, monitoring and reporting,
-                            automation, and software distribution functions.
-
-                        </li>
-
-                        <li>
-
-                            Coordinated technical work across more than 20
-                            contractors and civilian personnel.
-
-                        </li>
-
-                        <li>
-
-                            Participated in enterprise configuration governance
-                            and change-control activities.
-
-                        </li>
-
-                        <li>
-
-                            Supported automation for endpoint deployment,
-                            configuration enforcement, reporting, and security
-                            hardening.
-
-                        </li>
-
-                        <li>
-
-                            Helped connect infrastructure operations with broader
-                            DevSecOps and enterprise delivery objectives.
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="timeline-item">
-
-                <div class="timeline-date">
-
-                    <p>
-
-                        May 2020 — October 2022
-
-                    </p>
-
-                    <p>
-
-                        Enterprise Environment
-
-                    </p>
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-
-                        Enterprise-Level System Software Administrator
-
-                    </h3>
-
-                    <p class="company">
-
-                        United States Marine Corps
-
-                    </p>
-
-                    <p>
-
-                        Provided Tier II enterprise systems support across
-                        directory, messaging, networking, server, and Microsoft
-                        infrastructure.
-
-                    </p>
-
-                    <ul>
-
-                        <li>
-
-                            Supported migration of enterprise email accounts into
-                            a hybrid Microsoft 365 environment.
-
-                        </li>
-
-                        <li>
-
-                            Troubleshot DNS, DHCP, Microsoft Exchange, networking,
-                            and directory-service incidents.
-
-                        </li>
-
-                        <li>
-
-                            Reimaged workstations and servers and completed
-                            in-place operating-system upgrades.
-
-                        </li>
-
-                        <li>
-
-                            Coordinated priority incidents that could not be
-                            resolved by local or regional support teams.
-
-                        </li>
-
-                        <li>
-
-                            Supported virtualized environments and remotely
-                            managed enterprise systems.
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section
-    id="technologies"
-    class="section"
->
-
-    <div class="container">
-
-        <p class="eyebrow">
-
-            TECHNICAL SKILLS
-
-        </p>
-
-        <h2>
-
-            Technologies
-
-        </h2>
-
-        <p class="section-text">
-
-            Tools and platforms I use professionally, maintain in lab
-            environments, or study through hands-on projects.
-
-        </p>
-
-        <div class="technology-grid">
-
-            <div class="technology-group">
-
-                <h3>
-
-                    Operating Systems
-
-                </h3>
-
-                <p>
-
-                    Linux, RHEL, Windows Server
-
-                </p>
-
-            </div>
-
-            <div class="technology-group">
-
-                <h3>
-
-                    Containers
-
-                </h3>
-
-                <p>
-
-                    Docker, Podman, OCI, runc concepts, Linux namespaces,
-                    cgroups, OverlayFS
-
-                </p>
-
-            </div>
-
-            <div class="technology-group">
-
-                <h3>
-
-                    Kubernetes Platforms
-
-                </h3>
-
-                <p>
-
-                    Kubernetes, RKE2, AKS, Rancher, Helm, Kubernetes networking,
-                    persistent storage
-
-                </p>
-
-            </div>
-
-            <div class="technology-group">
-
-                <h3>
-
-                    Infrastructure Automation
-
-                </h3>
-
-                <p>
-
-                    Ansible, Terraform, Packer, Bash, Python
-
-                </p>
-
-            </div>
-
-            <div class="technology-group">
-
-                <h3>
-
-                    CI/CD and Source Control
-
-                </h3>
-
-                <p>
-
-                    Git, GitHub Actions, GitLab CI/CD, Artifactory, automated
-                    build and deployment workflows
-
-                </p>
-
-            </div>
-
-            <div class="technology-group">
-
-                <h3>
-
-                    Infrastructure and Services
-
-                </h3>
-
-                <p>
-
-                    Azure, VMware, Proxmox, NFS, FreeIPA, DNS, DHCP,
-                    Microsoft 365, Exchange
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section
-    id="interests"
-    class="section alternate"
->
-
-    <div class="container">
-
-        <p class="eyebrow">
-
-            CURRENT FOCUS
-
-        </p>
-
-        <h2>
-
-            Engineering Interests
-
-        </h2>
-
-        <p class="section-text">
-
-            I enjoy understanding systems beneath the abstraction layer rather
-            than simply using the tools built on top of them.
-
-        </p>
-
-        <div class="interest-grid">
-
-            <div class="interest-card">
-
-                <h3>
-
-                    Linux Internals
-
-                </h3>
-
-                <p>
-
-                    Exploring how applications communicate with the Linux
-                    kernel through system calls, process management,
-                    scheduling, namespaces, filesystems and memory.
-
-                </p>
-
-            </div>
-
-            <div class="interest-card">
-
-                <h3>
-
-                    Container Runtimes
-
-                </h3>
-
-                <p>
-
-                    Learning how Docker, Podman and runc work internally
-                    through namespaces, cgroups, OverlayFS, mounts and the
-                    OCI Runtime Specification.
-
-                </p>
-
-            </div>
-
-            <div class="interest-card">
-
-                <h3>
-
-                    Kubernetes Platforms
-
-                </h3>
-
-                <p>
-
-                    Building secure Kubernetes platforms with RKE2,
-                    Rancher, GitOps, Helm, storage, networking and
-                    platform automation.
-
-                </p>
-
-            </div>
-
-            <div class="interest-card">
-
-                <h3>
-
-                    DevSecOps
-
-                </h3>
-
-                <p>
-
-                    Creating repeatable infrastructure and secure delivery
-                    pipelines through Infrastructure as Code, automation,
-                    container security and software supply chain practices.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section
-    id="resume"
-    class="section"
->
-
-    <div class="container">
-
-        <div class="resume-header">
-
-            <div>
-
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container hero-content">
                 <p class="eyebrow">
-
-                    PROFESSIONAL PROFILE
-
+                    Infrastructure · Automation · DevSecOps
                 </p>
+
+                <h1>Carson Jones</h1>
 
                 <h2>
-
-                    Résumé Snapshot
-
+                    Building secure, automated infrastructure from Linux
+                    internals to Kubernetes.
                 </h2>
 
+                <p class="hero-description">
+                    I am a Systems Administrator focused on infrastructure
+                    automation, Linux, containers, Kubernetes, CI/CD, and
+                    secure software delivery in connected and disconnected
+                    environments.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button primary" href="#projects">
+                        View Projects
+                    </a>
+
+                    <a
+                        class="button secondary"
+                        href="assets/Carson-Jones-Resume.pdf"
+                        download
+                    >
+                        Download Résumé
+                    </a>
+
+                    <a
+                        class="button secondary"
+                        href="https://www.linkedin.com/in/carson-jones-0b4602228/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+                </div>
+
+                <div class="focus-list" aria-label="Primary technical areas">
+                    <span>🐧 Linux</span>
+                    <span>☸ Kubernetes</span>
+                    <span>⚙ Ansible</span>
+                    <span>📦 Containers</span>
+                    <span>☁ Azure</span>
+                    <span>🛡 DevSecOps</span>
+                </div>
             </div>
+        </section>
 
-            <a
-                class="button primary"
-                href="assets/Carson-Jones-Resume.pdf"
-                download
-            >
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Selected Work</p>
 
-                Download PDF
+                    <h2>Featured Projects</h2>
 
-            </a>
+                    <p>
+                        Projects focused on understanding infrastructure below
+                        the abstraction layer and converting manual processes
+                        into repeatable engineering workflows.
+                    </p>
+                </div>
 
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-number">01</div>
+
+                        <p class="project-category">
+                            Linux Internals / Containers
+                        </p>
+
+                        <h3>Toy Container Runtime</h3>
+
+                        <p>
+                            A minimal container runtime built in Python to
+                            explore how Docker, Podman, and OCI runtimes isolate
+                            and execute processes using Linux kernel features.
+                        </p>
+
+                        <ul>
+                            <li>Linux namespace isolation</li>
+                            <li>Container root filesystem handling</li>
+                            <li>Mount and process lifecycle management</li>
+                            <li>Low-level container runtime concepts</li>
+                        </ul>
+
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Linux</span>
+                            <span>Namespaces</span>
+                            <span>Containers</span>
+                            <span>Mounts</span>
+                        </div>
+
+                        <a
+                            class="project-link"
+                            href="https://github.com/cjones4545/Toy-container-runtime"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View source code →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-number">02</div>
+
+                        <p class="project-category">
+                            Kubernetes / Infrastructure Automation
+                        </p>
+
+                        <h3>RKE2 Setup</h3>
+
+                        <p>
+                            An Ansible-driven installation workflow for
+                            deploying RKE2 Kubernetes in an air-gapped
+                            environment with repeatable configuration and
+                            offline installation assets.
+                        </p>
+
+                        <ul>
+                            <li>Automated RKE2 installation</li>
+                            <li>Disconnected deployment workflow</li>
+                            <li>Repeatable node configuration</li>
+                            <li>Ansible roles and inventories</li>
+                        </ul>
+
+                        <div class="tags">
+                            <span>Ansible</span>
+                            <span>RKE2</span>
+                            <span>Kubernetes</span>
+                            <span>Linux</span>
+                            <span>Air-Gapped</span>
+                        </div>
+
+                        <a
+                            class="project-link"
+                            href="https://github.com/cjones4545/rke2-setup"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View source code →
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section alternate-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Professional Background</p>
+
+                    <h2>Experience</h2>
+
+                    <p>
+                        Enterprise infrastructure operations, technical
+                        leadership, automation, and platform support.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-entry">
+                        <div class="timeline-meta">
+                            <p>June 2025 — Present</p>
+                            <p>Huntsville, Alabama</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>Systems Administrator II</h3>
+
+                            <p class="organization">
+                                Lockheed Martin
+                            </p>
+
+                            <p>
+                                Support on-premises infrastructure and
+                                development platforms while improving
+                                repeatability through automation,
+                                containerization, and infrastructure-as-code
+                                practices.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Support development and production
+                                    infrastructure across Linux, virtualization,
+                                    storage, and network-integrated services.
+                                </li>
+
+                                <li>
+                                    Deploy and manage containerized workloads
+                                    using Docker, Podman, Kubernetes, and related
+                                    tooling.
+                                </li>
+
+                                <li>
+                                    Develop reusable Ansible and Terraform
+                                    workflows to replace manual provisioning and
+                                    configuration.
+                                </li>
+
+                                <li>
+                                    Perform root-cause analysis across operating
+                                    systems, applications, pipelines, and
+                                    distributed infrastructure.
+                                </li>
+
+                                <li>
+                                    Help align infrastructure operations with
+                                    application delivery through version control,
+                                    automation, and repeatable workflows.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry">
+                        <div class="timeline-meta">
+                            <p>October 2022 — May 2024</p>
+                            <p>Quantico, Virginia</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>
+                                Applications and Automation Solutions Chief
+                            </h3>
+
+                            <p class="organization">
+                                United States Marine Corps
+                            </p>
+
+                            <p>
+                                Led enterprise teams responsible for databases,
+                                automation, monitoring, reporting, and software
+                                distribution in a large-scale operational
+                                environment.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Oversaw enterprise SQL, monitoring,
+                                    reporting, automation, and software
+                                    distribution functions.
+                                </li>
+
+                                <li>
+                                    Coordinated technical work across more than
+                                    20 contractors and civilian personnel.
+                                </li>
+
+                                <li>
+                                    Participated in enterprise configuration
+                                    governance and change-control activities.
+                                </li>
+
+                                <li>
+                                    Supported automation for endpoint
+                                    deployment, configuration enforcement,
+                                    reporting, and security hardening.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry">
+                        <div class="timeline-meta">
+                            <p>May 2020 — October 2022</p>
+                            <p>Enterprise Environment</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>
+                                Enterprise-Level System Software Administrator
+                            </h3>
+
+                            <p class="organization">
+                                United States Marine Corps
+                            </p>
+
+                            <p>
+                                Provided Tier II enterprise systems support
+                                across directory, messaging, networking, server,
+                                and Microsoft infrastructure.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Supported migration of enterprise email
+                                    accounts into a hybrid Microsoft 365
+                                    environment.
+                                </li>
+
+                                <li>
+                                    Troubleshot DNS, DHCP, Microsoft Exchange,
+                                    networking, and directory-service incidents.
+                                </li>
+
+                                <li>
+                                    Reimaged workstations and servers and
+                                    completed in-place operating-system upgrades.
+                                </li>
+
+                                <li>
+                                    Coordinated priority incidents that could not
+                                    be resolved by local or regional support.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Technical Skills</p>
+
+                    <h2>Technologies</h2>
+
+                    <p>
+                        Tools and systems I use professionally, maintain in lab
+                        environments, or study through hands-on projects.
+                    </p>
+                </div>
+
+                <div class="technology-grid">
+                    <article class="technology-card">
+                        <div class="technology-icon">🐧</div>
+                        <h3>Operating Systems</h3>
+                        <p>Linux, RHEL, Windows Server</p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">📦</div>
+                        <h3>Containers</h3>
+                        <p>
+                            Docker, Podman, OCI, namespaces, cgroups, OverlayFS
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">☸</div>
+                        <h3>Kubernetes</h3>
+                        <p>
+                            Kubernetes, RKE2, AKS, Rancher, Helm, storage, and
+                            networking
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">⚙</div>
+                        <h3>Automation</h3>
+                        <p>Ansible, Terraform, Packer, Bash, Python</p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">🔁</div>
+                        <h3>CI/CD</h3>
+                        <p>
+                            Git, GitHub Actions, GitLab CI/CD, Artifactory, and
+                            automated delivery workflows
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">☁</div>
+                        <h3>Infrastructure</h3>
+                        <p>
+                            Azure, VMware, Proxmox, NFS, FreeIPA, DNS, DHCP,
+                            Microsoft 365
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="section alternate-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Current Focus</p>
+
+                    <h2>Engineering Interests</h2>
+
+                    <p>
+                        I enjoy understanding systems beneath the abstraction
+                        layer instead of stopping at “it just works.”
+                    </p>
+                </div>
+
+                <div class="interest-grid">
+                    <article class="interest-card">
+                        <h3>Linux Internals</h3>
+
+                        <p>
+                            Exploring system calls, process management,
+                            permissions, namespaces, filesystems, memory, and
+                            kernel resource controls.
+                        </p>
+                    </article>
+
+                    <article class="interest-card">
+                        <h3>Container Runtimes</h3>
+
+                        <p>
+                            Learning how Docker, Podman, containerd, and runc
+                            assemble namespaces, cgroups, mounts, and OCI
+                            configuration into containers.
+                        </p>
+                    </article>
+
+                    <article class="interest-card">
+                        <h3>Platform Engineering</h3>
+
+                        <p>
+                            Building secure, repeatable developer platforms with
+                            Kubernetes, automation, identity, storage,
+                            observability, and self-service workflows.
+                        </p>
+                    </article>
+
+                    <article class="interest-card">
+                        <h3>DevSecOps</h3>
+
+                        <p>
+                            Integrating infrastructure as code, automated
+                            testing, policy, scanning, artifact management, and
+                            secure software delivery.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="section">
+            <div class="container">
+                <div class="resume-header">
+                    <div>
+                        <p class="eyebrow">Professional Profile</p>
+
+                        <h2>Résumé</h2>
+
+                        <p>
+                            A concise summary of my background and technical
+                            focus.
+                        </p>
+                    </div>
+
+                    <a
+                        class="button primary"
+                        href="assets/Carson-Jones-Resume.pdf"
+                        download
+                    >
+                        Download PDF
+                    </a>
+                </div>
+
+                <div class="resume-grid">
+                    <article class="resume-card">
+                        <h3>Professional Summary</h3>
+
+                        <p>
+                            Systems Administrator with experience supporting
+                            enterprise infrastructure, Linux systems,
+                            virtualization, containers, Kubernetes,
+                            infrastructure automation, and secure delivery
+                            practices.
+                        </p>
+                    </article>
+
+                    <article class="resume-card">
+                        <h3>Core Strengths</h3>
+
+                        <ul>
+                            <li>Linux systems administration</li>
+                            <li>Infrastructure automation</li>
+                            <li>Kubernetes operations</li>
+                            <li>Containers and OCI concepts</li>
+                            <li>Infrastructure as code</li>
+                            <li>Root-cause analysis</li>
+                            <li>Air-gapped infrastructure</li>
+                            <li>Technical leadership</li>
+                        </ul>
+                    </article>
+
+                    <article class="resume-card">
+                        <h3>Current Direction</h3>
+
+                        <p>
+                            Continuing to grow toward DevSecOps and platform
+                            engineering through deeper study of Linux internals,
+                            container runtimes, Kubernetes architecture, CI/CD,
+                            and secure software delivery.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-card">
+                <div>
+                    <p class="eyebrow">Connect</p>
+
+                    <h2>Interested in my work?</h2>
+
+                    <p>
+                        Review my repositories, download my résumé, or connect
+                        with me through LinkedIn.
+                    </p>
+                </div>
+
+                <div class="contact-actions">
+                    <a
+                        class="button primary"
+                        href="https://www.linkedin.com/in/carson-jones-0b4602228/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Message Me on LinkedIn
+                    </a>
+
+                    <a
+                        class="button secondary"
+                        href="https://github.com/cjones4545"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub
+                    </a>
+
+                    <a
+                        class="button secondary"
+                        href="assets/Carson-Jones-Resume.pdf"
+                        download
+                    >
+                        Download Résumé
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2026 Carson Jones</p>
+
+            <div class="footer-links">
+                <a
+                    href="https://github.com/cjones4545"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/carson-jones-0b4602228/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+            </div>
         </div>
+    </footer>
 
-
-
-        <div class="resume-section">
-
-            <h3>
-
-                Professional Summary
-
-            </h3>
-
-            <p>
-
-                Systems Administrator with experience supporting enterprise
-                infrastructure, Linux systems, virtualization, containers,
-                Kubernetes, infrastructure automation and secure delivery
-                practices. Passionate about understanding infrastructure from
-                the operating system upward and applying that understanding to
-                build repeatable, maintainable platforms.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="resume-section">
-
-            <h3>
-
-                Core Strengths
-
-            </h3>
-
-            <ul>
-
-                <li>
-
-                    Linux Systems Administration
-
-                </li>
-
-                <li>
-
-                    Infrastructure Automation
-
-                </li>
-
-                <li>
-
-                    Kubernetes Administration
-
-                </li>
-
-                <li>
-
-                    Containers and OCI Concepts
-
-                </li>
-
-                <li>
-
-                    DevSecOps
-
-                </li>
-
-                <li>
-
-                    Infrastructure as Code
-
-                </li>
-
-                <li>
-
-                    Root Cause Analysis
-
-                </li>
-
-                <li>
-
-                    Platform Engineering
-
-                </li>
-
-                <li>
-
-                    Air-Gapped Infrastructure
-
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div class="resume-section">
-
-            <h3>
-
-                Current Goals
-
-            </h3>
-
-            <p>
-
-                Continue growing into Platform Engineering and DevSecOps by
-                expanding knowledge of Linux internals, container runtimes,
-                Kubernetes architecture, CI/CD, secure software delivery and
-                cloud-native infrastructure.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section
-    id="contact"
-    class="contact"
->
-
-    <div class="container contact-grid">
-
-        <div>
-
-            <p class="eyebrow">
-
-                CONTACT
-
-            </p>
-
-            <h2>
-
-                Let's Connect
-
-            </h2>
-
-            <p>
-
-                If you'd like to discuss infrastructure, DevSecOps,
-                platform engineering or any of the projects listed here,
-                I'd be happy to connect.
-
-            </p>
-
-        </div>
-
-        <div class="contact-buttons">
-
-            <a
-
-                class="button primary"
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                href="https://www.linkedin.com/in/carson-jones-0b4602228/"
-
-            >
-
-                Message Me on LinkedIn
-
-            </a>
-
-            <a
-
-                class="button secondary"
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                href="https://github.com/cjones4545"
-
-            >
-
-                GitHub Profile
-
-            </a>
-
-            <a
-
-                class="button secondary"
-
-                href="assets/Carson-Jones-Resume.pdf"
-
-                download
-
-            >
-
-                Download Résumé
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<footer>
-
-    <div class="container footer">
-
-        <div>
-
-            © 2026 Carson Jones
-
-        </div>
-
-        <div class="footer-links">
-
-            <a
-                target="_blank"
-                href="https://github.com/cjones4545"
-            >
-
-                GitHub
-
-            </a>
-
-            <a
-                target="_blank"
-                href="https://www.linkedin.com/in/carson-jones-0b4602228/"
-            >
-
-                LinkedIn
-
-            </a>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<script src="theme.js"></script>
-
+    <script src="theme.js"></script>
 </body>
-
 </html>
