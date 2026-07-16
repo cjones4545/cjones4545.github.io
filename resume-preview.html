@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview | Carson Jones</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (systemPrefersDark ? "dark" : "light");
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a class="logo" href="index.html" aria-label="Back to home">CJ</a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="index.html#resume">Back to portfolio</a>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Dark</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="resume-preview-page">
+        <section class="section">
+            <div class="container">
+                <div class="resume-header">
+                    <div>
+                        <p class="eyebrow">Resume Preview</p>
+                        <h2>Carson Jones</h2>
+                        <p>Review the PDF below, then download a copy for sharing or printing.</p>
+                    </div>
+                    <div class="resume-actions">
+                        <a class="button primary" href="assets/Carson-Jones-Resume.pdf" download>Download PDF</a>
+                        <a class="button secondary" href="index.html#resume">Back to portfolio</a>
+                    </div>
+                </div>
+
+                <div class="resume-preview-card">
+                    <div class="resume-preview-shell">
+                        <iframe src="assets/Carson-Jones-Resume.pdf" title="Carson Jones résumé preview"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="theme.js"></script>
+</body>
+</html>
