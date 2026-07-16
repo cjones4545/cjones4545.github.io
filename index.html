@@ -1,76 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Carson Jones | DevSecOps Engineer</title>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Carson Jones' DevSecOps and infrastructure engineering portfolio."
+    >
+
+    <title>Carson Jones | DevSecOps Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="hero">
+        <nav class="navigation container">
+            <a class="logo" href="#top">CJ</a>
 
-<div class="container">
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a
+                    href="https://github.com/cjones4545"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </div>
+        </nav>
 
-<h1>Carson Jones</h1>
+        <div id="top" class="hero-content container">
+            <p class="eyebrow">Infrastructure • Automation • DevSecOps</p>
 
-<h2>Systems Administrator | DevSecOps Engineer</h2>
+            <h1>Carson Jones</h1>
 
-<p>
-I build secure, automated infrastructure with Linux,
-Kubernetes, containers, automation, and CI/CD.
-I'm passionate about understanding systems from the
-Linux kernel up through cloud-native platforms.
-</p>
+            <h2>Systems Administrator and Aspiring DevSecOps Engineer</h2>
 
-<h3>Featured Projects</h3>
+            <p class="hero-description">
+                I build secure, automated infrastructure and study systems
+                from Linux process isolation through container runtimes and
+                Kubernetes platforms.
+            </p>
 
-<div class="card">
-<h4>Toy Container Runtime</h4>
+            <div class="hero-buttons">
+                <a class="button primary" href="#projects">
+                    View Projects
+                </a>
 
-<p>
-A Python-based container runtime built to understand
-Linux namespaces, process isolation, root filesystems,
-and how OCI runtimes like runc actually work.
-</p>
+                <a
+                    class="button secondary"
+                    href="https://github.com/cjones4545"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub Profile
+                </a>
 
-<a href="https://github.com/cjones4545/Toy-container-runtime">
-Source Code →
-</a>
+                <a
+                    class="button secondary"
+                    href="https://www.linkedin.com/in/carson-jones-0b4602228/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+            </div>
 
-</div>
+            <div class="technology-list">
+                <span>Linux</span>
+                <span>Python</span>
+                <span>Ansible</span>
+                <span>Kubernetes</span>
+                <span>RKE2</span>
+                <span>Containers</span>
+                <span>CI/CD</span>
+            </div>
+        </div>
+    </header>
 
-<div class="card">
+    <main>
+        <section id="projects" class="section container">
+            <div class="section-heading">
+                <p class="eyebrow">Selected Work</p>
+                <h2>Featured Projects</h2>
 
-<h4>Air-Gapped Kubernetes Lab</h4>
+                <p>
+                    Projects focused on understanding infrastructure beneath
+                    the abstraction layers and automating repeatable platform
+                    deployments.
+                </p>
+            </div>
 
-<p>
-Automated deployment of an air-gapped RKE2 cluster
-using Ansible, Rancher, private registries,
-and repeatable infrastructure automation.
-</p>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-number">01</div>
 
-</div>
+                    <p class="project-category">
+                        Linux Internals / Containers
+                    </p>
 
-<div class="card">
+                    <h3>Toy Container Runtime</h3>
 
-<h4>Secure CI/CD</h4>
+                    <p>
+                        A minimal container runtime built in Python to explore
+                        how container isolation works beneath tools such as
+                        Docker, Podman, and runc.
+                    </p>
 
-<p>
-Building secure pipelines with GitHub Actions,
-Terraform, container security scanning,
-SBOM generation, and automated deployments.
-</p>
+                    <ul>
+                        <li>Linux namespace isolation</li>
+                        <li>Container root filesystem handling</li>
+                        <li>Mount and process management</li>
+                        <li>Python-based runtime implementation</li>
+                    </ul>
 
-</div>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Linux</span>
+                        <span>Namespaces</span>
+                        <span>Containers</span>
+                    </div>
 
-<hr>
+                    <a
+                        class="project-link"
+                        href="https://github.com/cjones4545/Toy-container-runtime"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View source code →
+                    </a>
+                </article>
 
-<p>
+                <article class="project-card">
+                    <div class="project-number">02</div>
 
-<a href="https://github.com/cjones4545">GitHub</a> |
-<a href="https://www.linkedin.com/in/YOURPROFILE">LinkedIn</a>
+                    <p class="project-category">
+                        Kubernetes / Infrastructure Automation
+                    </p>
 
-</p>
+                    <h3>Air-Gapped RKE2 Setup</h3>
 
-</div>
+                    <p>
+                        An Ansible-based installation workflow for deploying
+                        RKE2 Kubernetes in a disconnected environment using
+                        repeatable configuration and offline installation
+                        assets.
+                    </p>
 
+                    <ul>
+                        <li>Automated RKE2 installation</li>
+                        <li>Air-gapped deployment workflow</li>
+                        <li>Repeatable node configuration</li>
+                        <li>Ansible-driven infrastructure automation</li>
+                    </ul>
+
+                    <div class="tags">
+                        <span>Ansible</span>
+                        <span>RKE2</span>
+                        <span>Kubernetes</span>
+                        <span>Air-Gapped</span>
+                    </div>
+
+                    <a
+                        class="project-link"
+                        href="https://github.com/cjones4545/rke2-setup"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View source code →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">About Me</p>
+                    <h2>Engineering beyond “it just works.”</h2>
+                </div>
+
+                <div class="about-content">
+                    <p>
+                        I am a systems administrator focused on transitioning
+                        deeper into DevSecOps and platform engineering. I enjoy
+                        dissecting infrastructure layer by layer, from Linux
+                        processes and container isolation to Kubernetes
+                        platforms and automated delivery workflows.
+                    </p>
+
+                    <p>
+                        My current work and projects emphasize Linux,
+                        infrastructure automation, containerization,
+                        air-gapped environments, Kubernetes, and secure,
+                        repeatable deployments.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="contact-card">
+                <div>
+                    <p class="eyebrow">Connect</p>
+                    <h2>Explore my work</h2>
+
+                    <p>
+                        Review the source code, implementation decisions, and
+                        ongoing improvements across my public repositories.
+                    </p>
+                </div>
+
+                <div class="contact-links">
+                    <a
+                        class="button primary"
+                        href="https://github.com/cjones4545"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit GitHub
+                    </a>
+
+                    <a
+                        class="button secondary"
+                        href="https://www.linkedin.com/in/carson-jones-0b4602228/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Carson Jones</p>
+            <p>Built with HTML and CSS. Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
 </body>
 </html>
