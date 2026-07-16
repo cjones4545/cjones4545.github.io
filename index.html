@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Carson Jones — infrastructure, Linux, Kubernetes, automation, and DevSecOps portfolio."
+        content="Carson Jones — cloud infrastructure, Linux, Kubernetes, automation, and DevSecOps portfolio."
     >
 
     <title>Carson Jones | Infrastructure & DevSecOps</title>
@@ -18,11 +18,8 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
-        /*
-         * Apply the saved theme before the page renders.
-         * This prevents a bright flash when dark mode is enabled.
-         */
         const savedTheme = localStorage.getItem("portfolio-theme");
+
         const systemPrefersDark = window.matchMedia(
             "(prefers-color-scheme: dark)"
         ).matches;
@@ -35,11 +32,18 @@
 <body>
     <header class="site-header">
         <div class="container navigation">
-            <a class="logo" href="#top" aria-label="Carson Jones home">
+            <a
+                class="logo"
+                href="#top"
+                aria-label="Carson Jones home"
+            >
                 CJ
             </a>
 
-            <nav class="nav-links" aria-label="Primary navigation">
+            <nav
+                class="nav-links"
+                aria-label="Primary navigation"
+            >
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#technologies">Technologies</a>
@@ -52,8 +56,16 @@
                     aria-label="Switch color theme"
                     aria-pressed="false"
                 >
-                    <span class="theme-icon" aria-hidden="true">☾</span>
-                    <span class="theme-label">Dark</span>
+                    <span
+                        class="theme-icon"
+                        aria-hidden="true"
+                    >
+                        ☾
+                    </span>
+
+                    <span class="theme-label">
+                        Dark
+                    </span>
                 </button>
             </nav>
         </div>
@@ -63,25 +75,30 @@
         <section class="hero">
             <div class="container hero-content">
                 <p class="eyebrow">
-                    Infrastructure · Automation · DevSecOps
+                    Cloud Infrastructure · Automation · DevSecOps
                 </p>
 
                 <h1>Carson Jones</h1>
 
                 <h2>
                     Building secure, automated infrastructure from Linux
-                    internals to Kubernetes.
+                    systems to cloud-native Kubernetes platforms.
                 </h2>
 
                 <p class="hero-description">
-                    I am a Systems Administrator focused on infrastructure
-                    automation, Linux, containers, Kubernetes, CI/CD, and
-                    secure software delivery in connected and disconnected
-                    environments.
+                    I am a Systems Administrator with six years of progressive
+                    enterprise IT experience supporting hybrid on-premises and
+                    Microsoft Azure environments. My work focuses on Linux,
+                    cloud infrastructure, Kubernetes, infrastructure as code,
+                    CI/CD, and secure software delivery in regulated and
+                    disconnected environments.
                 </p>
 
                 <div class="hero-actions">
-                    <a class="button primary" href="#projects">
+                    <a
+                        class="button primary"
+                        href="#projects"
+                    >
                         View Projects
                     </a>
 
@@ -103,23 +120,34 @@
                     </a>
                 </div>
 
-                <div class="focus-list" aria-label="Primary technical areas">
+                <div
+                    class="focus-list"
+                    aria-label="Primary technical areas"
+                >
                     <span>🐧 Linux</span>
-                    <span>☸ Kubernetes</span>
-                    <span>⚙ Ansible</span>
-                    <span>📦 Containers</span>
                     <span>☁ Azure</span>
+                    <span>☸ AKS & RKE2</span>
+                    <span>⚙ Ansible & Terraform</span>
+                    <span>📦 Docker & Podman</span>
+                    <span>🔁 GitLab CI/CD</span>
                     <span>🛡 DevSecOps</span>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section
+            id="projects"
+            class="section"
+        >
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow">Selected Work</p>
+                    <p class="eyebrow">
+                        Selected Work
+                    </p>
 
-                    <h2>Featured Projects</h2>
+                    <h2>
+                        Featured Projects
+                    </h2>
 
                     <p>
                         Projects focused on understanding infrastructure below
@@ -130,13 +158,17 @@
 
                 <div class="project-grid">
                     <article class="project-card">
-                        <div class="project-number">01</div>
+                        <div class="project-number">
+                            01
+                        </div>
 
                         <p class="project-category">
                             Linux Internals / Containers
                         </p>
 
-                        <h3>Toy Container Runtime</h3>
+                        <h3>
+                            Toy Container Runtime
+                        </h3>
 
                         <p>
                             A minimal container runtime built in Python to
@@ -145,10 +177,21 @@
                         </p>
 
                         <ul>
-                            <li>Linux namespace isolation</li>
-                            <li>Container root filesystem handling</li>
-                            <li>Mount and process lifecycle management</li>
-                            <li>Low-level container runtime concepts</li>
+                            <li>
+                                Linux namespace isolation
+                            </li>
+
+                            <li>
+                                Container root filesystem handling
+                            </li>
+
+                            <li>
+                                Mount and process lifecycle management
+                            </li>
+
+                            <li>
+                                Low-level container runtime concepts
+                            </li>
                         </ul>
 
                         <div class="tags">
@@ -170,13 +213,17 @@
                     </article>
 
                     <article class="project-card">
-                        <div class="project-number">02</div>
+                        <div class="project-number">
+                            02
+                        </div>
 
                         <p class="project-category">
                             Kubernetes / Infrastructure Automation
                         </p>
 
-                        <h3>RKE2 Setup</h3>
+                        <h3>
+                            RKE2 Setup
+                        </h3>
 
                         <p>
                             An Ansible-driven installation workflow for
@@ -186,10 +233,21 @@
                         </p>
 
                         <ul>
-                            <li>Automated RKE2 installation</li>
-                            <li>Disconnected deployment workflow</li>
-                            <li>Repeatable node configuration</li>
-                            <li>Ansible roles and inventories</li>
+                            <li>
+                                Automated RKE2 installation
+                            </li>
+
+                            <li>
+                                Disconnected deployment workflow
+                            </li>
+
+                            <li>
+                                Repeatable node configuration
+                            </li>
+
+                            <li>
+                                Ansible roles and inventories
+                            </li>
                         </ul>
 
                         <div class="tags">
@@ -213,70 +271,194 @@
             </div>
         </section>
 
-        <section id="experience" class="section alternate-section">
+        <section
+            id="experience"
+            class="section alternate-section"
+        >
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow">Professional Background</p>
+                    <p class="eyebrow">
+                        Professional Background
+                    </p>
 
-                    <h2>Experience</h2>
+                    <h2>
+                        Experience
+                    </h2>
 
                     <p>
-                        Enterprise infrastructure operations, technical
-                        leadership, automation, and platform support.
+                        Six years of progressive experience supporting
+                        enterprise systems, hybrid-cloud infrastructure,
+                        Kubernetes platforms, automation, CI/CD, and large-scale
+                        technical operations.
                     </p>
                 </div>
 
                 <div class="timeline">
                     <article class="timeline-entry">
                         <div class="timeline-meta">
-                            <p>June 2025 — Present</p>
-                            <p>Huntsville, Alabama</p>
+                            <p>
+                                June 2025 — Present
+                            </p>
+
+                            <p>
+                                Huntsville, Alabama
+                            </p>
                         </div>
 
                         <div class="timeline-content">
-                            <h3>Systems Administrator II</h3>
+                            <h3>
+                                Systems Administrator II
+                            </h3>
 
                             <p class="organization">
                                 Lockheed Martin
                             </p>
 
                             <p>
-                                Support on-premises infrastructure and
-                                development platforms while improving
-                                repeatability through automation,
-                                containerization, and infrastructure-as-code
-                                practices.
+                                Engineer and maintain enterprise Linux
+                                infrastructure supporting software-development
+                                and production workloads across hybrid
+                                on-premises and Microsoft Azure environments.
                             </p>
 
                             <ul>
                                 <li>
-                                    Support development and production
-                                    infrastructure across Linux, virtualization,
-                                    storage, and network-integrated services.
+                                    Led the design and deployment of a complete
+                                    development platform within the Lockheed C3E
+                                    environment, establishing standardized
+                                    infrastructure, developer tooling, and
+                                    operational workflows.
                                 </li>
 
                                 <li>
-                                    Deploy and manage containerized workloads
-                                    using Docker, Podman, Kubernetes, and related
+                                    Designed, deployed, and administered
+                                    Kubernetes platforms using Azure Kubernetes
+                                    Service and RKE2 for containerized
+                                    application delivery.
+                                </li>
+
+                                <li>
+                                    Supported application portability and
+                                    operational consistency through Docker,
+                                    Podman, Kubernetes, and container-focused
+                                    engineering practices.
+                                </li>
+
+                                <li>
+                                    Implemented infrastructure as code with
+                                    Terraform and Ansible to automate
+                                    provisioning, configuration management, and
+                                    system lifecycle operations.
+                                </li>
+
+                                <li>
+                                    Developed and optimized GitLab CI/CD
+                                    pipelines for infrastructure deployments,
+                                    application delivery, artifact management,
+                                    and release workflows.
+                                </li>
+
+                                <li>
+                                    Applied GitOps principles, version control,
+                                    peer review, and code-driven change
+                                    management to improve auditability and
+                                    deployment reliability.
+                                </li>
+
+                                <li>
+                                    Performed root-cause analysis across
+                                    distributed Linux, virtualization, Azure,
+                                    Kubernetes, networking, storage, and
+                                    application environments.
+                                </li>
+
+                                <li>
+                                    Automated repetitive operations with
+                                    reusable Ansible playbooks, Bash, Python,
+                                    Terraform, and supporting infrastructure
                                     tooling.
                                 </li>
 
                                 <li>
-                                    Develop reusable Ansible and Terraform
-                                    workflows to replace manual provisioning and
-                                    configuration.
+                                    Collaborated directly with
+                                    software-development teams to improve build
+                                    infrastructure, deployment workflows, and
+                                    developer-platform capabilities.
                                 </li>
 
                                 <li>
-                                    Perform root-cause analysis across operating
-                                    systems, applications, pipelines, and
-                                    distributed infrastructure.
+                                    Contributed to platform architecture
+                                    initiatives involving persistent storage,
+                                    Kubernetes workload scheduling, container
+                                    security, infrastructure standardization,
+                                    and developer self-service.
+                                </li>
+                            </ul>
+
+                            <div class="tags experience-tags">
+                                <span>Azure</span>
+                                <span>AKS</span>
+                                <span>RKE2</span>
+                                <span>Linux</span>
+                                <span>Terraform</span>
+                                <span>Ansible</span>
+                                <span>GitLab CI/CD</span>
+                                <span>GitOps</span>
+                                <span>Docker</span>
+                                <span>Podman</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry">
+                        <div class="timeline-meta">
+                            <p>
+                                June 2024 — June 2025
+                            </p>
+
+                            <p>
+                                Albertville, Alabama
+                            </p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h3>
+                                Meter Reader
+                            </h3>
+
+                            <p class="organization">
+                                Municipal Utilities Board
+                            </p>
+
+                            <p>
+                                Supported reliable utility operations through
+                                accurate field data collection, equipment
+                                inspection, customer assistance, and detailed
+                                record maintenance.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Collected accurate residential, commercial,
+                                    and industrial meter readings for utility
+                                    billing.
                                 </li>
 
                                 <li>
-                                    Help align infrastructure operations with
-                                    application delivery through version control,
-                                    automation, and repeatable workflows.
+                                    Inspected meter conditions and reported
+                                    equipment malfunctions, maintenance
+                                    requirements, or signs of tampering.
+                                </li>
+
+                                <li>
+                                    Responded to customer questions and assisted
+                                    with billing and meter-related concerns.
+                                </li>
+
+                                <li>
+                                    Maintained detailed records of meter
+                                    locations, conditions, and required
+                                    maintenance activities.
                                 </li>
                             </ul>
                         </div>
@@ -284,13 +466,18 @@
 
                     <article class="timeline-entry">
                         <div class="timeline-meta">
-                            <p>October 2022 — May 2024</p>
-                            <p>Quantico, Virginia</p>
+                            <p>
+                                May 2020 — May 2024
+                            </p>
+
+                            <p>
+                                Quantico, Virginia
+                            </p>
                         </div>
 
                         <div class="timeline-content">
                             <h3>
-                                Applications and Automation Solutions Chief
+                                Systems Administrator
                             </h3>
 
                             <p class="organization">
@@ -298,157 +485,273 @@
                             </p>
 
                             <p>
-                                Led enterprise teams responsible for databases,
-                                automation, monitoring, reporting, and software
-                                distribution in a large-scale operational
-                                environment.
+                                Progressed through enterprise systems
+                                administration, Tier II support, technical
+                                leadership, automation, and application
+                                management responsibilities supporting the
+                                Marine Corps Enterprise Network.
                             </p>
 
                             <ul>
                                 <li>
-                                    Oversaw enterprise SQL, monitoring,
-                                    reporting, automation, and software
-                                    distribution functions.
+                                    Supported migration of base-wide on-premises
+                                    email accounts into a hybrid Microsoft 365
+                                    cloud environment.
                                 </li>
 
                                 <li>
-                                    Coordinated technical work across more than
-                                    20 contractors and civilian personnel.
+                                    Served as Enterprise Directory and Messaging
+                                    Liaison for an enterprise environment
+                                    supporting more than 180,000 users.
                                 </li>
 
                                 <li>
-                                    Participated in enterprise configuration
-                                    governance and change-control activities.
-                                </li>
-
-                                <li>
-                                    Supported automation for endpoint
-                                    deployment, configuration enforcement,
-                                    reporting, and security hardening.
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="timeline-entry">
-                        <div class="timeline-meta">
-                            <p>May 2020 — October 2022</p>
-                            <p>Enterprise Environment</p>
-                        </div>
-
-                        <div class="timeline-content">
-                            <h3>
-                                Enterprise-Level System Software Administrator
-                            </h3>
-
-                            <p class="organization">
-                                United States Marine Corps
-                            </p>
-
-                            <p>
-                                Provided Tier II enterprise systems support
-                                across directory, messaging, networking, server,
-                                and Microsoft infrastructure.
-                            </p>
-
-                            <ul>
-                                <li>
-                                    Supported migration of enterprise email
-                                    accounts into a hybrid Microsoft 365
-                                    environment.
-                                </li>
-
-                                <li>
-                                    Troubleshot DNS, DHCP, Microsoft Exchange,
-                                    networking, and directory-service incidents.
+                                    Provided Tier II troubleshooting for DNS,
+                                    DHCP, Microsoft Exchange, networking, and
+                                    directory services when incidents could not
+                                    be resolved by local or regional teams.
                                 </li>
 
                                 <li>
                                     Reimaged workstations and servers and
-                                    completed in-place operating-system upgrades.
+                                    performed in-place operating-system upgrades
+                                    for more than 50 Windows servers.
                                 </li>
 
                                 <li>
-                                    Coordinated priority incidents that could not
-                                    be resolved by local or regional support.
+                                    Served as Applications and Automation
+                                    Solutions Chief with oversight of enterprise
+                                    SQL, Power BI and automation, monitoring and
+                                    reporting, and Microsoft Endpoint
+                                    Configuration Manager teams.
+                                </li>
+
+                                <li>
+                                    Supervised and supported more than 20
+                                    contractors and civilian technical
+                                    personnel.
+                                </li>
+
+                                <li>
+                                    Monitored Windows Failover Clustering,
+                                    distribution-point health, and completion of
+                                    internal enterprise projects.
+                                </li>
+
+                                <li>
+                                    Strengthened SQL Server security by
+                                    modifying login and authentication controls
+                                    to improve the systems' security posture.
+                                </li>
+
+                                <li>
+                                    Developed Microsoft Power BI dashboards to
+                                    monitor enterprise infrastructure and
+                                    proactively identify operational or security
+                                    concerns.
                                 </li>
                             </ul>
+
+                            <div class="tags experience-tags">
+                                <span>Microsoft 365</span>
+                                <span>Hybrid Cloud</span>
+                                <span>Exchange</span>
+                                <span>DNS</span>
+                                <span>DHCP</span>
+                                <span>SQL Server</span>
+                                <span>Power BI</span>
+                                <span>MECM</span>
+                            </div>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="technologies" class="section">
+        <section
+            id="technologies"
+            class="section"
+        >
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow">Technical Skills</p>
+                    <p class="eyebrow">
+                        Technical Skills
+                    </p>
 
-                    <h2>Technologies</h2>
+                    <h2>
+                        Technologies
+                    </h2>
 
                     <p>
-                        Tools and systems I use professionally, maintain in lab
-                        environments, or study through hands-on projects.
+                        Technologies I use professionally, maintain in
+                        laboratory environments, or study through hands-on
+                        infrastructure and systems-engineering projects.
                     </p>
                 </div>
 
                 <div class="technology-grid">
                     <article class="technology-card">
-                        <div class="technology-icon">🐧</div>
-                        <h3>Operating Systems</h3>
-                        <p>Linux, RHEL, Windows Server</p>
-                    </article>
+                        <div class="technology-icon">
+                            ☁
+                        </div>
 
-                    <article class="technology-card">
-                        <div class="technology-icon">📦</div>
-                        <h3>Containers</h3>
+                        <h3>
+                            Cloud & Hybrid Infrastructure
+                        </h3>
+
                         <p>
-                            Docker, Podman, OCI, namespaces, cgroups, OverlayFS
+                            Microsoft Azure, Azure Kubernetes Service, hybrid
+                            on-premises and cloud infrastructure, managed
+                            identities, Azure storage, and cloud-integrated
+                            development platforms
                         </p>
                     </article>
 
                     <article class="technology-card">
-                        <div class="technology-icon">☸</div>
-                        <h3>Kubernetes</h3>
+                        <div class="technology-icon">
+                            🐧
+                        </div>
+
+                        <h3>
+                            Operating Systems
+                        </h3>
+
                         <p>
-                            Kubernetes, RKE2, AKS, Rancher, Helm, storage, and
-                            networking
+                            Linux, RHEL 8, RHEL 9, Windows Server, systems
+                            administration, security hardening, and lifecycle
+                            management
                         </p>
                     </article>
 
                     <article class="technology-card">
-                        <div class="technology-icon">⚙</div>
-                        <h3>Automation</h3>
-                        <p>Ansible, Terraform, Packer, Bash, Python</p>
-                    </article>
+                        <div class="technology-icon">
+                            ☸
+                        </div>
 
-                    <article class="technology-card">
-                        <div class="technology-icon">🔁</div>
-                        <h3>CI/CD</h3>
+                        <h3>
+                            Kubernetes Platforms
+                        </h3>
+
                         <p>
-                            Git, GitHub Actions, GitLab CI/CD, Artifactory, and
-                            automated delivery workflows
+                            Kubernetes, AKS, RKE2, Rancher, Helm, workload
+                            scheduling, persistent storage, networking, and
+                            air-gapped deployment
                         </p>
                     </article>
 
                     <article class="technology-card">
-                        <div class="technology-icon">☁</div>
-                        <h3>Infrastructure</h3>
+                        <div class="technology-icon">
+                            📦
+                        </div>
+
+                        <h3>
+                            Containers
+                        </h3>
+
                         <p>
-                            Azure, VMware, Proxmox, NFS, FreeIPA, DNS, DHCP,
-                            Microsoft 365
+                            Docker, Podman, OCI concepts, Linux namespaces,
+                            cgroups, OverlayFS, rootless containers, and
+                            container security
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">
+                            ⚙
+                        </div>
+
+                        <h3>
+                            Infrastructure Automation
+                        </h3>
+
+                        <p>
+                            Ansible, Terraform, Packer, Bash, Python,
+                            PowerShell, configuration management, and
+                            infrastructure as code
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">
+                            🔁
+                        </div>
+
+                        <h3>
+                            CI/CD & GitOps
+                        </h3>
+
+                        <p>
+                            GitLab CI/CD, GitHub Actions, Git, GitOps
+                            workflows, infrastructure pipelines, artifact
+                            management, release automation, and peer-reviewed
+                            changes
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">
+                            🖥
+                        </div>
+
+                        <h3>
+                            Virtualization & Infrastructure
+                        </h3>
+
+                        <p>
+                            VMware, Proxmox, virtual machines, enterprise
+                            storage, NFS, networking, DNS, DHCP, and identity
+                            services
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">
+                            🪪
+                        </div>
+
+                        <h3>
+                            Identity & Enterprise Services
+                        </h3>
+
+                        <p>
+                            FreeIPA, Microsoft 365, Microsoft Exchange,
+                            enterprise directory services, hybrid email
+                            environments, and access management
+                        </p>
+                    </article>
+
+                    <article class="technology-card">
+                        <div class="technology-icon">
+                            📊
+                        </div>
+
+                        <h3>
+                            Monitoring & Reporting
+                        </h3>
+
+                        <p>
+                            Power BI, enterprise infrastructure dashboards,
+                            operational reporting, platform monitoring, and
+                            root-cause analysis
                         </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="interests" class="section alternate-section">
+        <section
+            id="interests"
+            class="section alternate-section"
+        >
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow">Current Focus</p>
+                    <p class="eyebrow">
+                        Current Focus
+                    </p>
 
-                    <h2>Engineering Interests</h2>
+                    <h2>
+                        Engineering Interests
+                    </h2>
 
                     <p>
                         I enjoy understanding systems beneath the abstraction
@@ -458,7 +761,9 @@
 
                 <div class="interest-grid">
                     <article class="interest-card">
-                        <h3>Linux Internals</h3>
+                        <h3>
+                            Linux Internals
+                        </h3>
 
                         <p>
                             Exploring system calls, process management,
@@ -468,7 +773,9 @@
                     </article>
 
                     <article class="interest-card">
-                        <h3>Container Runtimes</h3>
+                        <h3>
+                            Container Runtimes
+                        </h3>
 
                         <p>
                             Learning how Docker, Podman, containerd, and runc
@@ -478,17 +785,22 @@
                     </article>
 
                     <article class="interest-card">
-                        <h3>Platform Engineering</h3>
+                        <h3>
+                            Cloud Platform Engineering
+                        </h3>
 
                         <p>
-                            Building secure, repeatable developer platforms with
-                            Kubernetes, automation, identity, storage,
-                            observability, and self-service workflows.
+                            Designing reliable hybrid-cloud platforms using
+                            Azure, Kubernetes, infrastructure automation,
+                            identity, storage, networking, and developer
+                            self-service workflows.
                         </p>
                     </article>
 
                     <article class="interest-card">
-                        <h3>DevSecOps</h3>
+                        <h3>
+                            DevSecOps
+                        </h3>
 
                         <p>
                             Integrating infrastructure as code, automated
@@ -500,17 +812,25 @@
             </div>
         </section>
 
-        <section id="resume" class="section">
+        <section
+            id="resume"
+            class="section"
+        >
             <div class="container">
                 <div class="resume-header">
                     <div>
-                        <p class="eyebrow">Professional Profile</p>
+                        <p class="eyebrow">
+                            Professional Profile
+                        </p>
 
-                        <h2>Résumé</h2>
+                        <h2>
+                            Résumé
+                        </h2>
 
                         <p>
-                            A concise summary of my background and technical
-                            focus.
+                            Enterprise systems administration, cloud
+                            infrastructure, Kubernetes, automation, and
+                            DevSecOps-focused engineering.
                         </p>
                     </div>
 
@@ -525,52 +845,180 @@
 
                 <div class="resume-grid">
                     <article class="resume-card">
-                        <h3>Professional Summary</h3>
+                        <h3>
+                            Professional Summary
+                        </h3>
 
                         <p>
-                            Systems Administrator with experience supporting
-                            enterprise infrastructure, Linux systems,
-                            virtualization, containers, Kubernetes,
-                            infrastructure automation, and secure delivery
-                            practices.
+                            IT professional with six years of progressive
+                            systems-administration experience and an increasing
+                            focus on DevSecOps and platform engineering.
+                            Experienced in building and maintaining reliable
+                            infrastructure across hybrid on-premises and
+                            Microsoft Azure environments.
+                        </p>
+
+                        <p>
+                            I focus on translating operational challenges into
+                            automated, repeatable solutions while prioritizing
+                            root-cause analysis, standardization, security
+                            compliance, maintainability, and continuous
+                            improvement.
                         </p>
                     </article>
 
                     <article class="resume-card">
-                        <h3>Core Strengths</h3>
+                        <h3>
+                            Core Skills
+                        </h3>
 
                         <ul>
-                            <li>Linux systems administration</li>
-                            <li>Infrastructure automation</li>
-                            <li>Kubernetes operations</li>
-                            <li>Containers and OCI concepts</li>
-                            <li>Infrastructure as code</li>
-                            <li>Root-cause analysis</li>
-                            <li>Air-gapped infrastructure</li>
-                            <li>Technical leadership</li>
+                            <li>
+                                Linux and RHEL administration
+                            </li>
+
+                            <li>
+                                Microsoft Azure
+                            </li>
+
+                            <li>
+                                Hybrid-cloud infrastructure
+                            </li>
+
+                            <li>
+                                AKS and RKE2 Kubernetes
+                            </li>
+
+                            <li>
+                                Docker and Podman
+                            </li>
+
+                            <li>
+                                Ansible and Terraform
+                            </li>
+
+                            <li>
+                                Packer and image automation
+                            </li>
+
+                            <li>
+                                GitLab CI/CD and GitOps
+                            </li>
+
+                            <li>
+                                Python, Bash, and PowerShell
+                            </li>
+
+                            <li>
+                                Infrastructure root-cause analysis
+                            </li>
+
+                            <li>
+                                Technical leadership
+                            </li>
+
+                            <li>
+                                Secure and regulated environments
+                            </li>
                         </ul>
                     </article>
 
                     <article class="resume-card">
-                        <h3>Current Direction</h3>
+                        <h3>
+                            Training & Certifications
+                        </h3>
+
+                        <ul>
+                            <li>
+                                CompTIA Security+
+                            </li>
+
+                            <li>
+                                Data Systems Administrator Course
+                            </li>
+
+                            <li>
+                                Data Systems Administrators Supervisors Course
+                            </li>
+
+                            <li>
+                                Corporals Course
+                            </li>
+
+                            <li>
+                                Martial Arts Instructor Course
+                            </li>
+
+                            <li>
+                                Active Top Secret clearance with SCI component
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="resume-card">
+                        <h3>
+                            Education
+                        </h3>
+
+                        <p>
+                            <strong>Liberty University</strong>
+                            <br>
+                            Lynchburg, Virginia
+                            <br>
+                            2021 — Present
+                        </p>
+
+                        <p>
+                            Current GPA: 3.7
+                            <br>
+                            Expected graduation: 2026
+                        </p>
+                    </article>
+
+                    <article class="resume-card">
+                        <h3>
+                            Cloud & Platform Focus
+                        </h3>
+
+                        <p>
+                            Current work includes hybrid Azure infrastructure,
+                            Kubernetes platform administration, GitLab CI/CD,
+                            infrastructure as code, artifact-delivery
+                            workflows, developer environments, and secure
+                            platform architecture.
+                        </p>
+                    </article>
+
+                    <article class="resume-card">
+                        <h3>
+                            Current Direction
+                        </h3>
 
                         <p>
                             Continuing to grow toward DevSecOps and platform
-                            engineering through deeper study of Linux internals,
-                            container runtimes, Kubernetes architecture, CI/CD,
-                            and secure software delivery.
+                            engineering through deeper study of cloud
+                            architecture, Linux internals, container runtimes,
+                            Kubernetes, infrastructure automation, CI/CD, and
+                            secure software supply chains.
                         </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
+        <section
+            id="contact"
+            class="contact-section"
+        >
             <div class="container contact-card">
                 <div>
-                    <p class="eyebrow">Connect</p>
+                    <p class="eyebrow">
+                        Connect
+                    </p>
 
-                    <h2>Interested in my work?</h2>
+                    <h2>
+                        Interested in my work?
+                    </h2>
 
                     <p>
                         Review my repositories, download my résumé, or connect
@@ -611,7 +1059,9 @@
 
     <footer class="site-footer">
         <div class="container footer-content">
-            <p>© 2026 Carson Jones</p>
+            <p>
+                © 2026 Carson Jones
+            </p>
 
             <div class="footer-links">
                 <a
